@@ -1,0 +1,2 @@
+El objetivo de los ejercicios es modificar el fichero html para que quede con el mismo aspecto que la foto correspondiente.
+Excepto en el 2 donde hay que señalar los errores del código.

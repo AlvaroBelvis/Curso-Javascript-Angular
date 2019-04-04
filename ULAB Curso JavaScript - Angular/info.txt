@@ -1,0 +1,11 @@
+Documentación del curso:
+
+https://github.com/juanenrisley/web-course
+
+Manuales de todos los lenguajes:
+
+https://goalkicker.com/
+
+Tutoriales html, css, javascript:
+
+https://www.w3schools.com/

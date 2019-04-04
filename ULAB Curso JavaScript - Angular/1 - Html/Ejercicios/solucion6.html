@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario de prueba de HTML5</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <p>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="name_control" id="nombre" autofocus required />
+      </p>
+
+      <p>
+        <label for="email">Correo electrónico: </label>
+        <input
+          id="email"
+          type="email"
+          maxlength="50"
+          name="email_control"
+          required
+        />
+      </p>
+
+      <p>
+        <label for="url">URL: </label>
+        <input
+          id="url"
+          type="url"
+          name="url_control"
+          placeholder="Escribe la URL de tu página web personal"
+        />
+      </p>
+
+      <p>
+        <label for="fecha">Fecha: </label>
+        <input id="fecha" type="date" name="date_control" />
+      </p>
+
+      <p>
+        <label for="tiempo">Tiempo: </label>
+        <input id="tiempo" type="time" name="time_control" />
+      </p>
+
+      <p>
+        <label for="fecha-hora">Fecha y hora: </label>
+        <input id="fecha-hora" type="datetime" name="datetime_control" />
+      </p>
+
+      <p>
+        <label for="mes">Mes: </label>
+        <input id="mes" type="month" name="month_control" />
+      </p>
+
+      <p>
+        <label for="semana">Semana: </label>
+        <input id="semana" type="week" name="week_control" />
+      </p>
+
+      <p>
+        <label for="numero">Número (min -10, max 10): </label>
+        <input
+          id="numero"
+          type="number"
+          name="number_control"
+          min="-10"
+          max="10"
+          value="0"
+        />
+      </p>
+
+      <p>
+        <label for="telefono">Teléfono: </label>
+        <input id="telefono" type="tel" name="tel_control" />
+      </p>
+
+      <p>
+        <label for="search">Término de búsqueda: </label>
+        <input id="search" type="search" name="search_control" />
+      </p>
+
+      <p>
+        <label for="color">Color favorito: </label>
+        <input id="color" type="color" name="color_control" />
+      </p>
+
+      <p>
+        <input type="submit" value="Enviar" />
+      </p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario de registro</title>
+  </head>
+  <body>
+    <h1>Formulario de registro</h1>
+    <form action="exercise-1-solved.html" method="POST">
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre"/>
+          </p>
+      
+          <p>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos" />
+          </p>
+      
+          <p>
+            Sexo: <input type="radio" name="sexo" id="sexo-h" value="h" />
+            <label for="sexo-h">hombre</label>
+            <input type="radio" name="sexo" id="sexo-m" value="m" checked />
+            <label for="sexo-m">mujer</label>
+          </p>
+      
+          <p>
+            <label for="correo">Correo:</label>
+            <input type="email" name="correo" id="correo" />
+          </p>
+      
+          <p>
+            <label for="poblacion">Población:</label>
+            <select name="poblacion" id="poblacion">
+              <option selected>Alicante</option>
+              <option>Madrid</option>
+              <option>Sevilla</option>
+              <option>Valencia</option>
+            </select>
+          </p>
+      
+          <p>
+            <label for="descripcion">Descripción:</label>
+            <textarea
+              name="descripcion"
+              id="descripcion"
+              rows="6"
+              cols="60"
+            ></textarea>
+          </p>
+      
+          <p>
+            <input type="checkbox" name="info" id="info" />
+            <label for="info"
+              >Deseo recibir información sobre novedades y ofertas</label
+            >
+          </p>
+      
+          <p>
+            <input type="checkbox" name="condiciones" id="condiciones" />
+            <label for="condiciones">
+              Declaro haber leido y aceptar las condiciones generales del programa y
+              la normativa sobre protección de datos</label
+            >
+          </p>
+      
+          <p>
+            <input type="submit" value="Enviar" />
+          </p>
+    </form>
+  </body>
+</html>
