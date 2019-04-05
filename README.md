@@ -1,2 +1,2 @@
-# Ejercicios-Javascript---Angular
+# Ejercicios-Javascript-Angular
 Repositorio para los trabajos del curso
