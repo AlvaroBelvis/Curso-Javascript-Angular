@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Post</title>
+
+    <style>
+        header, footer{
+            background-color: rgba(47, 255, 75, 0.918);
+            height: 180px;
+        }
+
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .avatar{
+            vertical-align: middle;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            justify-content: center;
+        }
+
+        .zonauser{
+            display:flex;
+            flex-direction: column;
+            
+        }
+
+        a {
+            color: black;
+            padding: 8px;
+            
+        }
+        a:hover {
+            color: white;
+            background-color: gray;
+            border-radius: 4px;
+        }
+
+        h2{
+            display: flex;
+            justify-content: center;
+        }
+
+        form{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            width: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+        <header>
+            <img src="profile-180.jpg" alt="Logo Web">
+            <h1>My big ass blog</h1>
+            <div class="zonauser">
+                <img src="profile-180.jpg" alt="Avatar" class="avatar"> 
+                <a href="user.html">User Profile</a>
+            </div>
+        </header>
+    
+    <h2>New Post</h2>
+
+    <form action="main.html">
+        Title:
+        <input type="text" required>
+        Content:
+        <textarea rows="4" cols="50" required></textarea>
+        <input type="submit" value="Crear">
+        <input type="button" value="Cancelar" onclick="location.href='main.html'">
+    </form>
+
+    <footer>
+        Designed by Álvaro Belvis Quiles
+    </footer>
+    
+</body>
+
+</html>

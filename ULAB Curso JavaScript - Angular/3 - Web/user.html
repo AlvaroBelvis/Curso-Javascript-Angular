@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User</title>
+
+    <style>
+            header, footer{
+                background-color: rgba(47, 255, 75, 0.918);
+                height: 180px;
+            }
+    
+            footer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                font-size: large;
+            }
+    
+            header{
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            .avatar{
+                vertical-align: middle;
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                justify-content: center;
+            }
+
+            .avatar2{
+                vertical-align: middle;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                justify-content: center;
+            }
+    
+            .zonauser{
+                display:flex;
+                flex-direction: column;
+                
+            }
+
+            a {
+                color: black;
+                padding: 8px;
+                
+            }
+            a:hover {
+                color: white;
+                background-color: gray;
+                border-radius: 4px;
+            }
+
+            h2{
+                display: flex;
+                justify-content: center;
+            }
+
+            article{
+                outline: 2px solid;
+            }
+
+            .container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .container2{
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+                padding: 10px;
+            }
+            
+        </style>
+
+    
+</head>
+<body>
+    
+    <header>
+        <img src="profile-180.jpg" alt="Logo Web">
+        <h1>My big ass blog</h1>
+        <div class="zonauser">
+            <img src="back.png" alt="Volver" class="avatar"> 
+            <a href="main.html">Main Page</a>
+        </div>
+        
+    </header>
+
+
+    <h2>User Profile</h2>
+    
+    <div class="container">
+        <img src="profile-180.jpg" alt="Avatar" class="avatar">
+        <div class="container2"> 
+            <strong>User:</strong> Bender
+            <strong>Date:</strong> <time>28/03/1999</time>
+            <strong>Coutry:</strong> América
+        </div>
+    </div>
+    
+
+    <h3>Publiced Post:</h3>
+
+    <article id="post1">
+        <h3>Post 1</h3>
+        <p>by User</p>
+        <img src="profile-180.jpg" alt="Avatar" class="avatar2"> 
+        <time>13th March 2016</time>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut enim iusto, dignissimos placeat blanditiis facilis sint eveniet sit veniam ad voluptates vitae excepturi officia! Vel ex eveniet magni animi optio.
+        </p>
+    </article>
+
+    <article id="post2">
+        <h3>Post 2</h3>
+        <p>by User</p>
+        <img src="profile-180.jpg" alt="Avatar" class="avatar2"> 
+        <time>13th March 2016</time>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut enim iusto, dignissimos placeat blanditiis facilis sint eveniet sit veniam ad voluptates vitae excepturi officia! Vel ex eveniet magni animi optio.
+        </p>
+    </article>
+
+    <footer>
+        Designed by Álvaro Belvis Quiles
+    </footer>
+
+</body>
+</html>
