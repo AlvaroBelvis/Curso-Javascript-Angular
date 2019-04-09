@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    
+    let n1 = prompt("Escribe un número");
+    n1 = +n1;
+    vector = new Array(n1);
+    aux = 0;
+
+    for(let i=0; i<=n1;i++){
+        vector[i] = aux + 1;
+        aux++;
+    }
+
+    document.write("<p>"+vector+"</p>");
+    vector.push(n1);
+    document.write(vector);
+    vector.shift;
+    document.write(vector);
+
+
+
+
+
+    </script>
+
+</body>
+</html>

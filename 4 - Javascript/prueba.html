@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    //Re
+    <script>
+        let n1 = prompt("Escribe un número");       //Recoge un string
+        let n2 = prompt("Escribe otro número");
+        n1 = +n1;                                   //Forzamos que sean números, pork el prompt coge string
+        n2 = +n2;                                   //Tambien se puede usar number(n2)
+        let mayor;
+        let menor;
+        let suma = 0;
+        let pares = 0;
+        let impares = 0;
+
+        console.log(n1);
+        console.log(n2);
+
+        if(n1 >= n2){
+            mayor = n1;
+            menor = n2;
+        }else{
+            mayor = n2;
+            menor = n1;
+        }
+
+        let cadena = "";
+        for(let i=menor; i<=mayor; i++){
+            //console.log(i);  Con esto lo sacamos en vertical
+            cadena = cadena + " " + i;        //Con esto lo sacamos por pantalla en horizontal con una cadena y separados por espacio
+            suma += i;
+            if(i%2 == 0){
+                pares++;
+            }else{
+                impares++;
+            }
+        }
+
+        console.log(cadena);
+        document.write("Los pares son: " + pares + "<br>");
+        document.write("Los impares son: " + impares);
+        alert("La suma total es: " + suma);
+
+        
+    </script>
+
+</body>
+</html>
