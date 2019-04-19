@@ -1,0 +1,42 @@
+Ejecutar archivos javascript con Node JS en Visual Studio:
+
+1. Instalar en el PC Node JS. Se puede comprobar si lo tienes con el comando node -v en el cmd
+
+2. Abrir el Visual Studio y seleccionar la carpeta donde se encuentren nuestros js
+
+3. Seleccionar el archivo que queremos y con el botón secundario darle a la opción de "open in terminal"
+
+4. En la parte inferior del Visual Studio se nos abrirá un terminal con la ruta de la carpeta donde se
+encuentran nuestros archivos. Si no aparece nada en el terminal, pulsar intro para refrescar.
+
+5. Con el terminal abierto y la ruta adecuada a la carpeta donde están los archivos utilizar el comando
+"node archivo.js" para ejecutar el js con node.
+
+--------------------------------------------------------------------------------
+
+Gestor de paquetes NPM y modules especiales:
+
+1. Se instala junto con Node JS. Para comprobar que lo tienes usa el comando npm -v en el cmd
+
+2. Para crear el archivo de configuración tenemos que poner el terminal en la carpeta donde vamos a trabajar.
+Al igual que con el Node JS, utilizar el mismo método para que el terminal de Visual Studio se ubique en la
+carpeta adecuada.
+
+3. Una vez en la carpeta adecuada utilizar el comando "npm init --yes" o "npm init" para crear el archivo de
+configuración package.json.
+
+4. "npm init --yes" nos crea el archivo de configuración con los parametros por defecto, con "npm init" podemos
+configurarlos nosotros a mano.
+
+5. Una vez creado el archivo de configuración podemos instalarle modulos con el comando "npm install --save modulo".
+Cada vez que instalemos un nuevo modulo se creara un archivo package-lock.json con la configuración anterior por si
+queremos deshacerlo. Tambien se creará una carpeta node_modules que contiene los modulos instalados en el archivo de
+configuración.
+
+6. Ahora ya podremos utilizar los modulos instalados en el archivo package.json en cualquiera de nuestros archivos js
+que se encuentren en la misma carpeta. Para ello dentro del js utilizar el comando require y el nombre del modulo.
+
+7. Si queremos modificar a mano el package.json se puede hacer. Pero despues tendremos que utilizar el comando
+"npm update --save" para que los cambios surjan efecto.
+
+8. "npm uninstall --save modulo" borra el modulo correspondiente del package.json
