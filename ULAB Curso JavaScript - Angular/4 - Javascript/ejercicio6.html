@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Ejercicio 3</title>
+    </head>
+
+    <body>
+
+        <div id="ini">
+            <a href="#"  onclick="start(0, 0)">Empezar!</a>
+        </div>
+
+        <script>
+
+            let puntuacion = 0;
+
+            function start(repe, puntuacion){
+
+                if (repe >= 10)
+                    alert("Tu puntuacion es: " + puntuacion);
+                else{
+
+                    let n1, n2;
+                    let div = document.getElementById("ini");
+
+                    let bueno = Math.floor((Math.random() * 3));
+                    n1 = Math.floor((Math.random() * 10) + 1);
+                    n2 = Math.floor((Math.random() * 10) + 1);
+                    div.innerHTML = "<p>¿Cuanto es " + n1 + " X " +n2 + " ?</p>"
+                    let t;
+                    let btn;
+                    
+                    for (let index = 0; index < 3; index++) {
+                        btn = document.createElement("button");
+
+                        if(bueno == index){
+                            t = document.createTextNode(n1*n2);
+                            btn.onclick = function() {start(repe+1, puntuacion+1);};
+                        }else{
+                                t = document.createTextNode(Math.floor((Math.random() * 100) + 1));
+                                btn.onclick = function() {start(repe+1, puntuacion); };
+                        }
+
+                        btn.appendChild(t);
+                        div.appendChild(btn);
+                    }
+                }
+            }
+    
+        </script>
+
+    </body>
+
+</html>

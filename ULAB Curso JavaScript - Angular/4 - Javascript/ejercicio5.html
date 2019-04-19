@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <div id="div1">
+            <p>
+                <a class="nomrmalLink" href="hello.html" title="hello world">Hello World</a>
+                <a class="normalLink" href="bye.html" title="bye world">Bye World</a>
+                <a class="specialLink" href="helloagain.html" title="hello again">Hello again World</a>
+            </p>
+        </div>
+
+        <div class="encabezado" id="encabezadoFactura">
+            <label class="nombre">Luis Martinez Gonzalez</label>
+            <label class="telefono">965111222</label>
+            <label class="numeroFactura">1250</label>
+        </div>
+
+        <script>
+            console.log(document.querySelector.title);                                  //Esto coge todas las etiquetas con title
+            console.log(document.querySelectorAll("a[title$='world']"));                //Esto busca todas las etiquetas a con un title acabado en world
+        </script>
+
+        <script>
+            document.getElementById("encabezadoFactura").className="resalta";           //cambiamos el class del 2º div de "encabezado" a "resalta"
+            document.getElementById("encabezadoFactura").children[2].innerHTML += 1;    //sumamos 1 al contenido del 3º label
+        </script>
+
+    </body>
+
+</html>

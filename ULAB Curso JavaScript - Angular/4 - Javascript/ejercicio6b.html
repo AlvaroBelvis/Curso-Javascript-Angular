@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>EL JUEGO DE LA TABLA DE MULTIPLICAR</title>
+		
+		<style>
+			ul {
+				list-style-type: none;
+				margin: 5;
+				padding: 0;
+				display: none;
+			}
+			li {
+				display: inline;
+				font-size: 25px;
+				border: 1px solid black;
+				padding: 10px;
+				margin: 5px;
+			}
+			
+			p {
+				font-size: 25px;
+			}
+			
+			div {
+				text-align:	center;
+			}
+		</style>
+		
+		<script>
+			let num1, num2, bueno;
+			let veces = 0, aciertos = 0, fallos = 0;
+			let pregunta, lista, terminado = false;
+			
+			function Juego() {
+					
+					pregunta = document.querySelector("#pregunta");
+					lista = document.querySelectorAll("li")
+					
+					lista.forEach(function(elem){elem.style.backgroundColor = 'transparent';});
+					
+					num1 =  Math.floor((Math.random()*10)+1);
+					num2 =  Math.floor((Math.random()*10)+1);
+					
+					pregunta.innerHTML = "¿Cuanto es " + num1 + " X " + num2 + "?";
+					
+					bueno = Math.floor(Math.random()*3);
+					
+					if(bueno == 0)
+					{
+						lista[0].textContent = (num1 * num2);
+					}
+					else
+					{
+						lista[0].textContent = Math.floor((Math.random()*100)+1);
+					}
+					
+					if (bueno == 1)
+					{
+						lista[1].textContent = (num1 * num2);
+					}
+					else
+					{
+						lista[1].textContent = Math.floor((Math.random()*100)+1);
+					}
+					
+					if (bueno == 2)
+					{
+						lista[2].textContent = (num1 * num2);
+					}
+					else
+					{
+						lista[2].textContent = Math.floor((Math.random()*100)+1);
+					}
+			}
+			
+			function Comprobar(elemento) {
+				if (!terminado)
+				{
+					if (elemento.textContent == (num1*num2))
+					{
+						elemento.style.backgroundColor = 'green';
+						aciertos++;
+					}
+					else
+					{
+						elemento.style.backgroundColor = 'red';
+						lista[bueno].style.backgroundColor = 'green';
+						fallos++;
+					}
+					veces++;
+					setTimeout(function() {
+						if (veces < 10)
+						{
+							Juego();
+						}
+						else
+						{
+							terminado = true;
+							lista[0].style.backgroundColor = 'green';
+							lista[1].style.backgroundColor = 'transparent';
+							lista[2].style.backgroundColor = 'red';
+							pregunta.innerHTML = "Tú resultado es: ";
+
+							
+							lista[0].innerHTML = aciertos;
+							lista[1].innerHTML = "B : M";
+							lista[2].innerHTML = fallos;
+							
+							document.querySelector('#reiniciar').style.display = 'contents';
+							document.querySelector('#reiniciar').addEventListener('click',function(){
+								terminado = false;
+								veces = aciertos = fallos = 0;
+								this.style.display = 'none';
+								Juego();
+							},false);
+						}
+					},1000);
+				}
+			}
+			
+			window.onload = function() {
+				document.querySelectorAll("li").forEach(function(elemento) {
+					elemento.addEventListener('click',function() {Comprobar(this);},false)});
+				document.querySelector("#pregunta").addEventListener('click',function() {
+					document.querySelector('ul').style.display = 'contents';
+					Juego();
+				},false);
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<h2>EL JUEGO DE LA TABLA DE MULTIPLICAR</h2>
+			<p id="pregunta">JUGAR</p>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			<br/><br/>
+			<p id='reiniciar' style="display: none;">Reiniciar</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        
+        <script>
+
+            //Aunque en javascript la variables no tienen tipo es recomendable ponerlas todas como tipo let o var
+            let n1 = prompt("Escribe un número");       //Recoge un string
+            let n2 = prompt("Escribe otro número");
+            let mayor;
+            let menor;
+            let suma = 0;
+            let pares = 0;
+            let impares = 0;
+            let cadena = "";
+
+            n1 = +n1;                                   //Forzamos que sean números, pork el prompt coge string
+            n2 = +n2;                                   //Tambien se puede usar number(n2)
+
+            console.log(n1);                            //Mostramos los números en la consola del navegador. F12 en navegador, consola.
+            console.log(n2);                            //Para ver si se han recogido bien los números del prompt
+
+            if(n1 >= n2){                               //Definimos quien es el mayor y el menor
+                mayor = n1;
+                menor = n2;
+            }else{
+                mayor = n2;
+                menor = n1;
+            }
+
+            for(let i=menor; i<=mayor; i++){            //Sumamos los números del menor al mayor y vemos cuantos pares y impares hay
+                cadena = cadena + " " + i;              //Los guardamos en un string para mostrarlo por consola
+                suma += i;
+                if(i%2 == 0){
+                    pares++;
+                }else{
+                    impares++;
+                }
+            }
+
+            console.log(cadena);
+            alert("La suma total es: " + suma);         //Sacamos una alerta por pantalla para mostrar el resultado de la suma
+            document.write("Se ha introducido el número " + n1 + " y el " + n2 + "<br>");
+            document.write("La suma de todos los números del " + n1 + " al " + n2 + " es = " + suma + "<br>");
+            document.write("Hay un total de " + pares + " números pares entre el " + n1 + " y el " + n2 + "<br>");
+            document.write("Hay un total de  " + impares + " números impares entre el " + n1 + " y el " + n2 + "<br>");
+            
+        </script>
+
+    </body>
+    
+</html>

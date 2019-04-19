@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        
+        <script>
+                                                        //En javascript las variables no tienen tipo. Se detecta automaticamente con su contenido
+            n1 = prompt("Escribe un número");           //Pedimos un número por pantalla. Se recoge como string
+            n1 = +n1;                                   //Forzamos que n1 sea un número, no un string
+            vector = new Array(n1);                     //Inicializamos un vector con tamaño n1
+            aux = 0;
+
+            //Rellenamos el vector empezando por 0
+            for(let i=0; i<=n1;i++){
+                vector[i] = aux;
+                aux++;
+            }
+
+            document.write("<p>"+vector+"</p>");        //Creamos un etiqueta p en el html para mostrar el contenido del vector
+            vector.push(n1);                            //Añadimos al final del vector un nuevo elemento. El vector se hace más grande
+            document.write(vector+"<br>");              //Lo mostramos en el html
+            vector.shift();                             //Elminimanos la 1º posición del vector. El vector se hace más pequeño
+            document.write(vector);
+
+        </script>
+
+    </body>
+    
+</html>

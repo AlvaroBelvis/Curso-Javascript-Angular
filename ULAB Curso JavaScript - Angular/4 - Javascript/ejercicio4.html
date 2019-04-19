@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <p>
+            Parrafo de prueba
+            <a href="https:www.google.es">Enlace a Google</a>
+            <a href="https:www.youtube.com">Enlace a Youtube</a>
+        </p>
+
+        <p>
+            Parrafo de prueba
+            <a href="https:www.google.es">Enlace a Google</a>
+        </p>
+
+        <p>
+            Parrafo de prueba
+            <a href="https:www.google.es">Enlace a Google</a>
+        </p>
+
+        <script>
+        
+            //Utilizamos la estructura DOM para acceder al contenido del html
+            let parrafos = document.getElementsByTagName("p");              //Cogemos todos los <p> de la pagina y los ponemos en el array parrafos
+            let enlaces = document.getElementsByTagName("a");               //Cogemos todos los <a> de la pagina y los ponemos en el array enlaces
+            
+            //Sacamos por pantalla el número de etiquetas de cada tipo
+            document.write("La página tiene un total de " + parrafos.length + " etiquetas de tipo 'p' <br>");   
+            document.write("La página tiene un total de " + enlaces.length + " etiquetas de tipo 'a' <br>");                                 
+            document.write("La primera etiqueta 'p' tiene un total de " + parrafos[0].getElementsByTagName("a").length + " etiquetas 'a' en su interior");
+            
+        </script>
+        
+    </body>
+
+</html>

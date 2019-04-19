@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+        
+            let n1 = prompt("Escribe un número");       //Recoge un string
+            let n2 = prompt("Escribe otro número");
+            let mayor;
+            let menor;
+
+            n1 = +n1;                                   //Forzamos que sea número
+            n2 = +n2;
+
+            if(n1 >= n2){                               //Vemos cual es el menor y el mayor
+                mayor = n1;
+                menor = n2;
+            }else{
+                mayor = n2;
+                menor = n1;
+            }
+
+            //Comprobamos que los números esten entre 1-10
+            if(menor<1 || menor>10){
+                alert("el numero " + menor + " debe estar entre 1 y 10");
+            }else if (mayor<1 || mayor>10){
+                alert("el numero " + mayor + " debe estar entre 1 y 10");
+            }else{
+
+                //Si los números están bien sacamos en el html la tabla de multiplicar del número menor con iteraciones = mayor
+                document.write('<table border="1">');
+
+                for(let i=1; i<=mayor; i++){
+                    document.write("<tr>");
+                    document.write("<td>" + menor + "x" + i + "</td>");
+                    document.write("<td>=</td>");
+                    document.write("<td>" + menor*i + "</td>");
+                    document.write("<tr>");
+                }
+                
+                document.write("</table>");
+
+            }
+
+        </script>
+
+    </body>
+
+</html>
