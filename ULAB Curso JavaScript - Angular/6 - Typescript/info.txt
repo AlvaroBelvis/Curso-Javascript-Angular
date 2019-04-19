@@ -1,0 +1,37 @@
+Instalar Typescript en Node JS:
+-------------------------------------
+
+Para poder compilar archivos typescript (ts) necesitamos instalar el modulo de typescritp en el NPM de Node JS.
+Lo podemos hacer de dos formas:
+
+1) Local, en la carpeta donde estemos trabajando. Para ello primero deberemos crear el archivo de configuración
+package.json tal y como vimos en el tema anterior de Node JS. Una vez creado este archivo le instalaremos el modulo de
+typescript con el comando "npm install --save typescript". Sin embargo esta opción no es muy recomendable, ya que como
+vimos el modulo solo estará disponible para los archivos de esta carpeta y typescritp se usa para practicamente todo,
+por lo que es mejor utilizar la otra opción.
+
+2) Global, en todo el PC. Para ello utilizaremos el comando "npm install -g typescript" en el cmd del PC. Recordar que
+hay que tener instalado previamente el Node JS y el NPM como vimos en el tema anterior. Una vez instalado se puede
+comprobar que typescript está disponible en el sistema con el comando "tsc -v".
+
+Compilar un Typescript:
+-----------------------------
+
+Para compilar un archivo ts debemos de utilizar el modulo que hemos instalado. Para ello utilizaremos el comando
+"tsc archivo.ts". El compilador lo que realizará es una conversión de typescript a javascritp, por lo que se generá
+un archivo js, el cual ya podremos utilizar con nuestros proyectos html.
+
+Al igual que antes podremos ejecutar estos archivos js con el Node JS mediante el comando "node archivo.js".
+
+Tipos de ejercicios:
+------------------------
+
+Los ejercicios que tienen por nombre ejerciciox.ts son sacados de esta web:
+
+https://softwarecrafters.io/typescript/typescript-javascript-introduccion/
+
+Los ejercicios que tienen por nombre ejerx.ts son sacados de esta web:
+
+https://www.codifica.me/ejercicios-basicos-de-typescript-desde-codigo-javascript/
+
+Estos últimos consisten en pasar un código de javascript a typescript.

@@ -1,0 +1,42 @@
+body{
+	margin: 10%;
+	background-color: grey;
+}        
+form, h2
+{
+	background-color: GreenYellow;
+}
+
+form.elegante input  
+{ 
+	padding: .2em; 
+	
+}   
+.btn  
+{ 
+	display: block; 
+	margin: 1em 0; 
+}   
+
+div  
+{ 
+	margin: .4em 0; 
+} 
+div label  
+{ 
+	width: 50%; 
+	float: left; 
+} 
+input:focus  
+{ 
+	border: 2px solid #000; 
+	background: #F3F3F3; 
+} 
+.btn_link  
+{ 
+	border: 0; 
+	padding: 0; 
+	background-color: transparent; 
+	color: blue; 
+	border-bottom: 1px solid blue; 
+} 

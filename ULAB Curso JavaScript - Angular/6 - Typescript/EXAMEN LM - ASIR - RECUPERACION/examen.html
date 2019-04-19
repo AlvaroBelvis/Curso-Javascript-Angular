@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>RECU</title>
+    <link rel="stylesheet" href="css/estilos.css">
+	<script src="scripts/parrafos.js"></script>
+</head>
+<body>
+		<h2>EXAMEN RECUPERACIÓN 2 TRIMESTRE</h2>
+        <form name="miFormulario" class="elegante">
+			<fieldset>
+				<legend>Datos a Introducir</legend>
+                <div>				
+                    <label for="título">Indica Título (Solo 1 palabra con letras mayúsculas de la A a la Z, mínimo 5 y máximo 20 letras):</label>
+    				<input type="text" name="titulo" id="titulo">
+					<br>
+					<br>
+					<br>
+					<label for="numero">Indica cuántos párrafos (Del 1 al 10):</label>
+					<input type="text" name="numero" id="numero">
+    				<br>
+                </div>
+				<input style="display:none" name="btn_lanzar" class="btn" type="button" value="LANZAR">
+			</fieldset>
+			
+			<fieldset>
+				<legend>Respuesta</legend>
+				<div id="respuesta">
+				</div>
+			</fieldset>				
+		</form>
+</body>
+</html>
